@@ -1,4 +1,4 @@
-Tue Oct 11 16:28:34 2022
+Tue Oct 11 18:27:31 2022
 Windows-10-10.0.22000
 Ren'Py 8.0.3.22090809
  
@@ -47,3 +47,10 @@ Version: b'4.6.0 Compatibility Profile Context 22.10.1.221003'
 Display Info: None
 Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
 Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
