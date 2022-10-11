@@ -1,0 +1,3 @@
+renpy.solid
+renpy.geometry renpy.solid
+renpy.ftl

@@ -1,0 +1,69 @@
+Mon Oct 10 19:46:28 2022
+Windows-10-10.0.22000
+Ren'Py 8.0.3.22090809
+ 
+
+Bootstrap to the start of init.init took 0.03s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.02s
+Loading script took 0.43s
+Loading save slot metadata. took 0.00s
+Loading persistent took 0.00s
+Faled to initialize steam: FileNotFoundError("Could not find module 'D:\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.04s
+Loading analysis data took 0.00s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Dump and make backups. took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.01s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.01s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'Radeon RX 580 Series'
+Version: b'4.6.0 Compatibility Profile Context 22.8.1.220810'
+Display Info: None
+Screen sizes: virtual=(800, 600) physical=(800, 600) drawable=(800, 600)
+Could not open 'cache/shaders.txt':
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "D:\renpy-8.0.3-sdk\renpy\bootstrap.py", line 277, in bootstrap
+    renpy.main.main()
+  File "D:\renpy-8.0.3-sdk\renpy\main.py", line 660, in main
+    run(restart)
+  File "D:\renpy-8.0.3-sdk\renpy\main.py", line 146, in run
+    renpy.execution.run_context(True)
+  File "D:\renpy-8.0.3-sdk\renpy\execution.py", line 938, in run_context
+    context.run()
+  File "renpy/common/00start.rpy", line 287, in script
+    python:
+  File "D:\renpy-8.0.3-sdk\renpy\script.py", line 927, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'start'.
+
+While running game code:
+  File "renpy/common/00start.rpy", line 287, in script
+    python:
+ScriptError: could not find label 'start'.
