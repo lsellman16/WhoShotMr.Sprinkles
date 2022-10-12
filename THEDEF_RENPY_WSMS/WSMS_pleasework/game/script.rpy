@@ -58,13 +58,52 @@ label start:
         "Hmm? A party?, well at least it it gives me a brea-":
             rabblock "To Die for!"
             furrson "I rest my tail"
-            rabblock "The case file came in around midnight lets take a look."
+            rabblock "The case file came in around midnight."
         "Let me guess, someone has died when it's mean't to be their big celebration?":
             "Rabblock is in utter confusion"
             rabblock "how did you know that?"
             furrson "case file just came in around midnight"
             rabblock "oh right I was out with Bunnie Smalls last night!"
-    
+
+    rabblock "Well lets take a look shall we?"
+
+    jump Report
+
+
+label Report:
+
+    $ option_1 = False
+    $ option_2 = False
+
+    scene bg room with dissolve
+
+    menu:
+        "Victim?" if option_1 == False:
+            $ option_1 = True
+            furrson "Mr. C.Sprinkles, only a young bun it seems."
+            rabblock "Partygoer as they say, he was hosting a party to celebrate his new mansion."
+            
+            jump Report
+
+        "Location?" if option_2 == False:
+            $ option_2 = True
+            rabblock "ah that's right!"
+            furrson "hmmm? What?"
+            rabblock "Sprinkles had recently purchased the Tooth Tree Mansion, whole town was invited"
+            furrson "where's mine then?"
+            rabblock "oh long story bout that either way I attended"
+            
+            jump Report
+
+
+
+
+
+
+
+
+
+
 
     # This ends the game.
 
