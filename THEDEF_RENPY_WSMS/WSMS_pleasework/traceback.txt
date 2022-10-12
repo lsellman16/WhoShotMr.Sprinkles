@@ -1,30 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 88, in script
-    menu:
-  File "game/script.rpy", line 90, in <module>
-    "... small candy" if small_candy_chosen == False:
-NameError: name 'small_candy_chosen' is not defined
+  File "game/script.rpy", line 100, in script
+    rablock "Anyways is it enough information?"
+Exception: Sayer 'rablock' is not defined.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 88, in script
-    menu:
-  File "C:\Users\1023789\Desktop\renpy-8.0.3-sdk\renpy\ast.py", line 1903, in execute
-    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
-  File "C:\Users\1023789\Desktop\renpy-8.0.3-sdk\renpy\exports.py", line 976, in menu
-    condition = renpy.python.py_eval(condition)
-  File "C:\Users\1023789\Desktop\renpy-8.0.3-sdk\renpy\python.py", line 1092, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\1023789\Desktop\renpy-8.0.3-sdk\renpy\python.py", line 1085, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 90, in <module>
-    "... small candy" if small_candy_chosen == False:
-NameError: name 'small_candy_chosen' is not defined
+  File "game/script.rpy", line 100, in script
+    rablock "Anyways is it enough information?"
+  File "C:\Users\1023789\Desktop\renpy-8.0.3-sdk\renpy\ast.py", line 881, in execute
+    who = eval_who(self.who, self.who_fast)
+  File "C:\Users\1023789\Desktop\renpy-8.0.3-sdk\renpy\ast.py", line 774, in eval_who
+    raise Exception("Sayer '%s' is not defined." % who)
+Exception: Sayer 'rablock' is not defined.
 
 Windows-10-10.0.19044 AMD64
 Ren'Py 8.0.3.22090809
 WSMS_pleasework 1.0
-Wed Oct 12 11:02:12 2022
+Wed Oct 12 12:25:34 2022
