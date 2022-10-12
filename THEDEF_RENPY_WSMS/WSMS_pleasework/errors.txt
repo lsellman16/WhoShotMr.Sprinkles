@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 61: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
-    "Let me guess, someone has died when it's mean't to be their big celebration"
-                                                                                 ^
+File "game/script.rpy", line 98: expected statement.
+    furrson: "sighs"
+           ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Tue Oct 11 18:27:14 2022
+Wed Oct 12 12:24:51 2022

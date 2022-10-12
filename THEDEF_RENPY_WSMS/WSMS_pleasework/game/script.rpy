@@ -58,13 +58,81 @@ label start:
         "Hmm? A party?, well at least it it gives me a brea-":
             rabblock "To Die for!"
             furrson "I rest my tail"
-            rabblock "The case file came in around midnight lets take a look."
+            rabblock "The case file came in around midnight."
         "Let me guess, someone has died when it's mean't to be their big celebration?":
             "Rabblock is in utter confusion"
-            rabblock "how did you know that?"
-            furrson "case file just came in around midnight"
-            rabblock "oh right I was out with Bunnie Smalls last night!"
+            rabblock "How did you know that?"
+            furrson "Case file just came in around midnight"
+            rabblock "Oh right I was out with Bunnie Smalls last night!"
+
+    rabblock "Well lets take a look shall we?"
+
+    jump Report
+
+
+label Report:
+
+    $ option_1 = False
+    $ option_2 = False
+
+    $ next_Scene = False
+
+
+    scene bg room with dissolve
+
+    menu:
+        "Victim?" if option_1 == False:
+            $ option_1 = True
+            furrson "Mr. C.Sprinkles, only a young bun it seems."
+            rabblock "Partygoer as they say, he was hosting a party to celebrate his new mansion."
+            
+            jump Report
+
+        "Location?" if option_2 == False:
+            $ option_2 = True
+            rabblock "Ah that's right!"
+            furrson "Hmmm? What?"
+            rabblock "Sprinkles had recently purchased the Tooth Tree Mansion, whole town was invited"
+            furrson "Where's mine then?"
+            rabblock "Oh long story bout that either way I attended"
+            furrson "Sighs*"
+            furrson "So did you notice anythng suspicious or unusual then"
+            rabblock
+            
+    rabblock "Anyways is it enough information?"
+    menu:
+        "Yes":
+            rabblock "Okay lets move"
+            jump Mansion_Entrance
+        "No":
+            jump Report
+
+label Mansion_Entrance:
+
+    scene bg room with dissolve
+
+    "The duo soon arrive to find police scattered at the door..."
+
+    "Police question the duo, notifying their presence and make their way through to the Chief"
+
+    rabblock "Perfect! So are you ready to help me find all the clues scattered around the Manor?"  
+
+    menu:
+        "Yes":
+        rabblock "Okay lets do this!"
+        
+        jump Kitchen
+
+label Kitchen:
+
+    rabblock "Hi there! I'm Detective Rabblock Nose, and you must be Chef B-Bop, can you tell me anything about Mr. Sprinkles?"
+
     
+
+
+
+
+
 
     # This ends the game.
 
