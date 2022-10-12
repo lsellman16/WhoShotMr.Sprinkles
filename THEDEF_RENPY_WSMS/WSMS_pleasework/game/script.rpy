@@ -1,12 +1,4 @@
-﻿# The script of the game goes in this file.
-
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
-
-define furrson = Character("Furrson")
-define rabblock = Character("Rabblock")
-
-
+﻿
 image rabblock normal neutral = "rabblock_normal_neutral"
 
 # The game starts here.
@@ -97,7 +89,7 @@ label Report:
             rabblock "Oh long story bout that either way I attended"
             furrson "Sighs*"
             furrson "So did you notice anythng suspicious or unusual then"
-            rabblock
+            rabblock "I have my suspisions"
             
     rabblock "Anyways is it enough information?"
     menu:
@@ -119,21 +111,32 @@ label Mansion_Entrance:
 
     menu:
         "Yes":
-        rabblock "Okay lets do this!"
+            rabblock "Okay lets do this!"
         
-        jump Kitchen
+            jump Kitchen
 
 label Kitchen:
 
+    scene bg room with dissolve
+
     rabblock "Hi there! I'm Detective Rabblock Nose, and you must be Chef B-Bop, can you tell me anything about Mr. Sprinkles?"
 
+    b_Bop "He was the big head of our family, hes my (__Brother__) you see. We were a happy family we grew up together in this house."
+    b_Bop "Then one morning our brother Benny Boy found him in his (__Office__) when he was meant to be doing paper work but found him hunched over his desk when he was shot!"
+
+    rabblock "Hmm something smells (__fishy__) in here, where were u the night of the murder?"
+
+    b_Bop "You think I’m a suspect? We called you here to find whoever killed Mr. Sprinkles not investigate us! That man kept on hoping around in places he shouldn’t be!"
+    b_Bop "No wonder he ended up getting (_killed_)! It wasn’t me though I ain’t no (__Bunny__) killer!”"
+
+    furrson "“Detective… did you notice the blood on his apron?"
+
+    jump Office
+
+label Office:
+
+    scene bg room with dissolve
     
-
-
-
-
-
-
     # This ends the game.
 
     return

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 98: expected statement.
-    furrson: "sighs"
-           ^
+File "game/script.rpy", line 120: expected menuitem
+    jump Kitchen
+    ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Wed Oct 12 12:24:51 2022
+Wed Oct 12 12:50:07 2022
