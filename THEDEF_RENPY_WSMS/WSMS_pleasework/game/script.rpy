@@ -121,22 +121,56 @@ label Kitchen:
 
     rabblock "Hi there! I'm Detective Rabblock Nose, and you must be Chef B-Bop, can you tell me anything about Mr. Sprinkles?"
 
-    b_Bop "He was the big head of our family, hes my (__Brother__) you see. We were a happy family we grew up together in this house."
-    b_Bop "Then one morning our brother Benny Boy found him in his (__Office__) when he was meant to be doing paper work but found him hunched over his desk when he was shot!"
+    bBop "He was the big head of our family, hes my (__Brother__) you see. We were a happy family we grew up together in this house."
+    bBop "Then one morning our brother Benny Boy found him in his (__Office__) when he was meant to be doing paper work but found him hunched over his desk when he was shot!"
 
     rabblock "Hmm something smells (__fishy__) in here, where were u the night of the murder?"
 
-    b_Bop "You think I’m a suspect? We called you here to find whoever killed Mr. Sprinkles not investigate us! That man kept on hoping around in places he shouldn’t be!"
-    b_Bop "No wonder he ended up getting (_killed_)! It wasn’t me though I ain’t no (__Bunny__) killer!”"
+    bBop "You think I’m a suspect? We called you here to find whoever killed Mr. Sprinkles not investigate us! That man kept on hoping around in places he shouldn’t be!"
+    bBop "No wonder he ended up getting (_killed_)! It wasn’t me though I ain’t no (__Bunny__) killer!"
 
-    furrson "“Detective… did you notice the blood on his apron?"
+    furrson "Detective… did you notice the blood on his apron?"
 
     jump Office
 
 label Office:
 
     scene bg room with dissolve
+
+    show rabblock_normal_neutral
+
+    rabblock "This is supposed to be where Mr. Sprinkles was the night of the murder, let’s have a look around shall we?"
+
+    bBun "Oh.. Hi there, sorry I didn’t greet you at the (__Door__) I was just going through some of Mr. Sprinkle's things.."
+
+    rabblock "You must be Mr. Sprinkles (__Wife__) Bun-Bun, I don’t mean to be rude or anything but I heard you had filed some domestic abuse paperwork a few years ago… This wasn’t a self defense act was it? I hope you know you won’t be in trouble if it was?"
+
+    bBun "Oh no! It was nothing like that! I think you met (__B-Bop_) already I’m sorry for his crazy behaviour he loved his brother very much this has been just as hard on him as it has been for us…"
+    bBun "We all just want to find who murdered my husband Mr Rabblock. You must understand that this is hard on all of us"
+
+    rabblock "Furrson.. I think I notice a (__Gun__) on top of the (__Desk__)! Keep this information between the two of us! If we grab it after Bun-Bun leaves we could dust it for (__Paw__) prints! Hurry Furrson and think of a way to make her leave!"
+
+    furrson "Uhhh Bun-Bun, I’m sorry to tell you that B-Bop actually (__accused__) you of murdering your (__husband__), he’s still in the (__Kitchen__)..."
+    furrson "he said that you smell like a fox as well… Sorry…."
+
+    bBun "HE DID NOT!!!!!!!" 
+    bBun "Oh I’ll (__show__) him!! He’s totally going to get (__kicked__) out of the (__manor__)  when it’s in my name!"
+
+    rabblock "You did it Mr Furrson! Now let’s see here.. Theres a few (_legal_) documents and a few bloodstained ones but what really concerns me is why was Bun Bun going through all of this stuff so soon?"
+    rabblock "Did she not notice the (_gun_)? I’ll start (_dusting_) it to see if we can find any clues.. It’s definately a (__Bunny__) paw! And look apparently this rabbit is left handed! We just have to see which rabbit is left handed!"
     
+    furrson "Just because the rabbit is left handed doesn’t means that their the (_murderer_) Detective! Keep that in mind!"
+
+    rabblock "You're right Furrson, we should talk to Benny Boy the one B-bop mentioned, the one who apparently found him of the (_night__) of the (__Murder__)"
+
+    jump Mansion_Entrance2
+
+label Mansion_Entrance2:
+
+    scene bg room with dissolve
+
+    rabblock "Hi there! Are you (Benny boy)? We wanted to ask you a few questions about your brother if that’s okay."
+
     # This ends the game.
 
     return
