@@ -1,4 +1,4 @@
-﻿
+
 image rabblock normal neutral = "rabblock_normal_neutral"
 
 # The game starts here.
@@ -31,31 +31,20 @@ label start:
 
     furrson "uhhhhgh"
 
-    menu:
-        "What is it Rabblock?":
-            rabblock "Why were you sleeping to begin with?!"
-            furrson "Because unlike you I don't spend my carrots all day looking at the smallest hare on my paws!"
-            rabblock "I do question most days why u bother coming along with me?"
-        "Ugh... what happened?":
-            rabblock "You were asleep, so when I came ru-"
-            furrson "I know!, its an expression fool!"
-            rabblock "foolish questions get foolish answers."
+    $ renpy.input("Ask what happened")
+    rabblock "Why were you sleeping to begin with?!"
+    furrson "Because unlike you I don't spend my carrots all day looking at the smallest hare on my paws!"
+    rabblock "I do question most days why u bother coming along with me?"
 
     rabblock "Anyways, have you seen our mail?"
     furrson "hmm? What is it now? We always get mail."
     rabblock "No, no, Not just some ordinary mail."
     rabblock "We've been invited to a party!"
     
-    menu:
-        "Hmm? A party?, well at least it it gives me a brea-":
-            rabblock "To Die for!"
-            furrson "I rest my tail"
-            rabblock "The case file came in around midnight."
-        "Let me guess, someone has died when it's mean't to be their big celebration?":
-            "Rabblock is in utter confusion"
-            rabblock "How did you know that?"
-            furrson "Case file just came in around midnight"
-            rabblock "Oh right I was out with Bunnie Smalls last night!"
+    $ renpy.input("Type Party?")
+    rabblock "To Die for!"
+    furrson "I rest my tail"
+    rabblock "The case file came in around midnight."
 
     rabblock "Well lets take a look shall we?"
 
@@ -70,26 +59,21 @@ label Report:
     $ next_Scene = False
 
 
-    scene bg room with dissolve
+    scene police_report with dissolve
 
-    menu:
-        "Victim?" if option_1 == False:
-            $ option_1 = True
-            furrson "Mr. C.Sprinkles, only a young bun it seems."
-            rabblock "Partygoer as they say, he was hosting a party to celebrate his new mansion."
-            
-            jump Report
+    $ renpy.input("Ask about the Victim")
+    furrson "Mr. C.Sprinkles, only a young bun it seems."
+    rabblock "Partygoer as they say, he was hosting a party to celebrate his new mansion."
 
-        "Location?" if option_2 == False:
-            $ option_2 = True
-            rabblock "Ah that's right!"
-            furrson "Hmmm? What?"
-            rabblock "Sprinkles had recently purchased the Tooth Tree Mansion, whole town was invited"
-            furrson "Where's mine then?"
-            rabblock "Oh long story bout that either way I attended"
-            furrson "Sighs*"
-            furrson "So did you notice anythng suspicious or unusual then"
-            rabblock "I have my suspisions"
+    $ renpy.input("Ask about Location")
+    rabblock "Ah that's right!"
+    furrson "Hmmm? What?"
+    rabblock "Sprinkles had recently purchased the Tooth Tree Mansion, whole town was invited"
+    furrson "Where's mine then?"
+    rabblock "Oh long story bout that, either way I attended"
+    furrson "Sighs*"
+    furrson "So did you notice anythng suspicious or unusual then"
+    rabblock "I believed he'd returned to his office after giving a speech"
             
     rabblock "Anyways is it enough information?"
     menu:
@@ -101,7 +85,7 @@ label Report:
 
 label Mansion_Entrance:
 
-    scene bg room with dissolve
+    scene mansion_entrance with dissolve
 
     "The duo soon arrive to find police scattered at the door..."
 
@@ -109,41 +93,52 @@ label Mansion_Entrance:
 
     rabblock "Perfect! So are you ready to help me find all the clues scattered around the Manor?"  
 
-    menu:
-        "Yes":
-            rabblock "Okay lets do this!"
+    $ renpy.input("Are you ready?")
+    rabblock "Okay lets do this!"
         
-            jump Kitchen
+    jump Kitchen
 
 label Kitchen:
 
-    scene bg room with dissolve
+    scene kitchen_scene with dissolve
+
+    show rabblock_normal at left
+    show bbop_normal at right
 
     rabblock "Hi there! I'm Detective Rabblock Nose, and you must be Chef B-Bop, can you tell me anything about Mr. Sprinkles?"
 
-    bBop "He was the big head of our family, hes my (__Brother__) you see. We were a happy family we grew up together in this house."
-    bBop "Then one morning our brother Benny Boy found him in his (__Office__) when he was meant to be doing paper work but found him hunched over his desk when he was shot!"
+    bBop "He was the big head of our family, hes my What member of family is you see. We were a happy family we grew up together in this house."
+    bBop "Then one morning our brother Benny Boy found him in his... uhh.." 
+    $ renpy.input("where was he found?")
+    bBop "Thats right! apparently he was meant to be doing paper work but found him hunched over his desk when he was shot!"
 
-    rabblock "Hmm something smells (__fishy__) in here, where were u the night of the murder?"
+    rabblock "Hmm something smells fishy in here,"
+    $ renpy.input("Ask him about his wearabouts before the crime")
 
-    bBop "You think I’m a suspect? We called you here to find whoever killed Mr. Sprinkles not investigate us! That man kept on hoping around in places he shouldn’t be!"
-    bBop "No wonder he ended up getting (_killed_)! It wasn’t me though I ain’t no (__Bunny__) killer!"
+    bBop "You think I’m a suspect? We called you here to find whoever killed Mr. Sprinkles not investigate us! That hare of his kept on hoping around in places he shouldn’t be!"
+    bBop "No wonder he ended up getting killed! It wasn’t me though I ain’t no Bunny killer!"
 
-    furrson "Detective… did you notice the blood on his apron?"
+    furrson "Detective… did you notice the..."
+    $ renpy.input("What did you notice")
+    rabblock "of course furrson, lets move on for now tho"
 
     jump Office
 
 label Office:
 
-    scene bg room with dissolve
+    scene office_scene with dissolve
 
-    show rabblock_normal_neutral
+    show rabblock_normal at left
+    show bbun_normal at right
 
     rabblock "This is supposed to be where Mr. Sprinkles was the night of the murder, let’s have a look around shall we?"
 
     bBun "Oh.. Hi there, sorry I didn’t greet you at the (__Door__) I was just going through some of Mr. Sprinkle's things.."
 
-    rabblock "You must be Mr. Sprinkles (__Wife__) Bun-Bun, I don’t mean to be rude or anything but I heard you had filed some domestic abuse paperwork a few years ago… This wasn’t a self defense act was it? I hope you know you won’t be in trouble if it was?"
+    $ renpy.input("Ask who she is?") 
+    bBun "Oh I am Ms Bun Bun, Wif... Widow of Mr Sprinkles"
+    rabblock ""
+    rabblock "This wasn’t a self defense act was it? I hope you know you won’t be in trouble if it was?"
 
     bBun "Oh no! It was nothing like that! I think you met (__B-Bop_) already I’m sorry for his crazy behaviour he loved his brother very much this has been just as hard on him as it has been for us…"
     bBun "We all just want to find who murdered my husband Mr Rabblock. You must understand that this is hard on all of us"
@@ -167,9 +162,13 @@ label Office:
 
 label Mansion_Entrance2:
 
-    scene bg room with dissolve
+    scene mansion_entrance with dissolve
+    
+    show rabblock_normal at left
+    show benboi_normal at right
 
-    rabblock "Hi there! Are you (Benny boy)? We wanted to ask you a few questions about your brother if that’s okay."
+    rabblock "Hi there! Are you Benny boy? We wanted to ask you a few questions about your brother if that’s okay."
+    "To Be continued..."
 
     # This ends the game.
 

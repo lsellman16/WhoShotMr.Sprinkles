@@ -2,9 +2,25 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 120: expected menuitem
-    jump Kitchen
-    ^
+File "game/script.rpy", line 44: invalid syntax
+    renpy.input("Type Party?" length=6)
+                               ^
+    
+
+File "game/script.rpy", line 64: invalid syntax
+    renpy.input("Ask about the Victim" length=20)
+                                        ^
+    
+
+File "game/script.rpy", line 68: invalid syntax
+    renpy.input("Ask about Location" length=20)
+                                      ^
+    
+
+File "game/script.rpy", line 96: invalid syntax
+    renpy.input("Are you" length=5)
+                           ^
+    
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Wed Oct 12 12:50:07 2022
+Tue Oct 18 17:41:51 2022
