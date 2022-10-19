@@ -1,4 +1,4 @@
-
+﻿
 image rabblock normal neutral = "rabblock_normal_neutral"
 
 # The game starts here.
